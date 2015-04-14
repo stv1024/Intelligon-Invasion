@@ -1,0 +1,24 @@
+package com.morln.game.ninja.command;
+
+option optimize_for = SPEED;
+option java_outer_classname = "Cmd";
+
+message NumericData {
+	// 前台加钱项目每级开销增长
+	required float fg_add_money_cost_increase_factor = 1;
+	// 前台加钱项目
+	repeated FgAddMoneyItem fg_add_money = 2;
+	// 划动加钱项目等级上限是3n-1
+	repeated SwipeAddMoneyItem swipe_add_money = 3;
+}
+
+message FgAddMoneyItem {
+	
+	required float money_per_second = 1;
+	
+	required float init_cost = 2;
+}
+
+message SwipeAddMoneyItem {
+	required float init_cost = 2;
+}

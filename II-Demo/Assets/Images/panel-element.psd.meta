@@ -1,0 +1,125 @@
+fileFormatVersion: 2
+guid: c670a89803a60704ab5c292251ce50bf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: panel-element
+    21300002: 9sx
+    21300004: x
+    21300006: 9s
+    21300008: stageinfopanel
+    21300010: icon-coin
+    21300012: icon-energy
+    21300014: icon-plus
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 9sx
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 934
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 13, y: 14, z: 62, w: 62}
+    - name: x
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 994
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 9s
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 926
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 11, y: 11, z: 11, w: 11}
+    - name: stageinfopanel
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 959
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 43, y: 8, z: 10, w: 44}
+    - name: icon-coin
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 880
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: icon-energy
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 879
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: icon-plus
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 882
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,17 @@
+package com.morln.game.ninja.command;
+
+option optimize_for = SPEED;
+option java_outer_classname = "Cmd";
+
+message ForeverData {
+	required int64 money = 1;
+	//用户关卡数据。无数据的stage表示锁定。
+	repeated UserStageData user_stage_data = 2;
+}
+
+message UserStageData {
+	required int32 id = 1;
+	//只要有数据，则已经解锁
+	required int32 stars = 2;
+	required int32 score = 3;
+}
