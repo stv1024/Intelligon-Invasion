@@ -23,10 +23,10 @@ public class MusicManager : MonoBehaviour
     {
         //GameManager.Instance.DidBossCome += OnBossCome;
         //GameManager.Instance.DidBossDie += OnAllBossDie;
-        audio.clip = Music0;
-        audio.loop = true;
-        audio.volume = 0.001f;
-        audio.Play();
+        GetComponent<AudioSource>().clip = Music0;
+        GetComponent<AudioSource>().loop = true;
+        GetComponent<AudioSource>().volume = 0.001f;
+        GetComponent<AudioSource>().Play();
         //TweenVolume.Begin(gameObject, 1f, 1f).delay = 0.5f;
     }
 
@@ -37,8 +37,8 @@ public class MusicManager : MonoBehaviour
     }
     void PlayMusicBoss()
     {
-        audio.clip = MusicBoss;
-        audio.Play();
+        GetComponent<AudioSource>().clip = MusicBoss;
+        GetComponent<AudioSource>().Play();
         //TweenVolume.Begin(gameObject, 0.2f, 1f);
     }
 
@@ -49,8 +49,8 @@ public class MusicManager : MonoBehaviour
     }
     void PlayMusic0()
     {
-        audio.clip = Music0;
-        audio.Play();
+        GetComponent<AudioSource>().clip = Music0;
+        GetComponent<AudioSource>().Play();
         //TweenVolume.Begin(gameObject, 0.2f, 1f);
     }
 }

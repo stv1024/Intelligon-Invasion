@@ -12,8 +12,8 @@ public class Neutron : Entity
 
     public override Vector2 Velocity
     {
-        get { return rigidbody2D.velocity; }
-        set { rigidbody2D.velocity = value; }
+        get { return GetComponent<Rigidbody2D>().velocity; }
+        set { GetComponent<Rigidbody2D>().velocity = value; }
     }
 
 	void Awake ()

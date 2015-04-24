@@ -13,6 +13,6 @@ public class Photon : Entity
 
     void Start()
     {
-        Destroy(gameObject, animation.clip.length);
+        Destroy(gameObject, GetComponent<Animation>().clip.length);
     }
 }

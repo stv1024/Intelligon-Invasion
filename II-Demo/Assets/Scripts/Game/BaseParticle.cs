@@ -15,8 +15,8 @@ public abstract class BaseParticle : Entity
     public abstract Color MyColor { get; }
     public override Vector2 Velocity
     {
-        get { return rigidbody2D.velocity; }
-        set { rigidbody2D.velocity = value; }
+        get { return GetComponent<Rigidbody2D>().velocity; }
+        set { GetComponent<Rigidbody2D>().velocity = value; }
     }
 
     #region 编辑器用
