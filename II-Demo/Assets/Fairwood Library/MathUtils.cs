@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Fairwood.Math
@@ -46,6 +47,52 @@ namespace Fairwood.Math
             }
 
             return (hash & 0x7FFFFFFF);
+        }
+
+        /// <summary>
+        /// 类似Mathf.InverseLerp但不Clamp01
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static float InverseLerpWithoutClamp(float a, float b, float value)
+        {
+            if (a != b)
+                return ((value - a) / (b - a));
+            return 0.0f;
+        }
+
+        public static class Rect
+        {
+            /// <summary>
+            /// 类似Rect.PointToNormalized但不Clamp01
+            /// </summary>
+            /// <param name="rectangle"></param>
+            /// <param name="point"></param>
+            /// <returns></returns>
+            public static Vector2 PointToNormalizedWithoutClamp(UnityEngine.Rect rectangle, Vector2 point)
+            {
+                return new Vector2(InverseLerpWithoutClamp(rectangle.x, rectangle.xMax, point.x), InverseLerpWithoutClamp(rectangle.y, rectangle.yMax, point.y));
+            }
+        }
+
+        /// <summary>
+        /// 获取从from向量到to向量的夹角
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        /// <param name="up"></param>
+        /// <returns></returns>
+        public static float DeltaAngle(Vector3 from, Vector3 to, Vector3 up)
+        {
+            float angle = 0.0f;
+
+            float absAngle = Vector3.Angle(from, to);
+            Vector3 crossVec = Vector3.Cross(from, to);
+            angle = absAngle * (Vector3.Dot(crossVec, up) > 0 ? 1.0f : -1.0f);
+
+            return angle;
         }
     }
 }

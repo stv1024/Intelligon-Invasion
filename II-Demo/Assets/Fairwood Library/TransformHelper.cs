@@ -38,7 +38,7 @@ namespace Fairwood
         /// <param name="parent"></param>
         public static void ResetAs(this Transform tra, Transform target, Transform parent)
         {
-            tra.parent = parent;
+            tra.SetParent(parent);
             var srcRectTra = tra as RectTransform;
             var tarRectTra = target as RectTransform;
             if (srcRectTra && tarRectTra)
@@ -50,6 +50,8 @@ namespace Fairwood
                 srcRectTra.offsetMin = tarRectTra.offsetMin;
                 srcRectTra.pivot = tarRectTra.pivot;
                 srcRectTra.sizeDelta = tarRectTra.sizeDelta;
+                tra.localRotation = target.localRotation;
+                tra.localScale = target.localScale;
             }
             else
             {
@@ -68,7 +70,7 @@ namespace Fairwood
             }
         }
 
-        public static Transform FindChildRecursively(this Transform tra,string name)
+        public static Transform FindChildRecursively(this Transform tra, string name)
         {
             Transform first = null;
             foreach (Transform sub in tra)
@@ -104,7 +106,7 @@ namespace Fairwood
             transform.localPosition = startPoint;
             var vector = endPoint - startPoint;
             transform.right = vector;
-            transform.localScale = transform.localScale.SetV3X(vector.magnitude/width);
+            transform.localScale = transform.localScale.SetV3X(vector.magnitude / width);
         }
     }
 }

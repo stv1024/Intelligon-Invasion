@@ -19,9 +19,9 @@ public class StageInfoPanel : MonoBehaviour
         //img.Raycast()
     }
 
-    public void SetAndRefresh(CsvConfig line, UserStageData userStageData)
+    public void SetAndRefresh(int stageID, CsvConfig line, UserStageData userStageData)
     {
-        StageID = userStageData.Id;
+        StageID = stageID;
         LblDescription.text = line["Description"];
     }
 

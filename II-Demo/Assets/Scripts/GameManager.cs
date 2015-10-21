@@ -113,10 +113,12 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Clear()
     {
-
-        foreach (Transform child in GameContainer.transform)
+        if (GameContainer != null)
         {
-            Destroy(child.gameObject);
+            foreach (Transform child in GameContainer.transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         TimeScaleManager.ResetToStart();

@@ -113,7 +113,7 @@ public class NaviUI : BaseUI
         var stageTable = CsvHolder.CsvDictionary["Stage"];
         var line = stageTable[sender.StageID];
         var userStageData = ForeverDataHolder.ForeverData.UserStageDataList.Find(x => x.Id == sender.StageID);
-        StageInfoPanel.SetAndRefresh(line, userStageData);
+        StageInfoPanel.SetAndRefresh(sender.StageID, line, userStageData);
     }
 
     public void ForceHideStageInfoPanel()

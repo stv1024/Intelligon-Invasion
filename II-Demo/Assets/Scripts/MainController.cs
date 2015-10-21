@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Assets.Scripts;
+﻿using System.Collections.Generic;
 using Assets.Scripts.Data.Proto;
 using Fairwood;
 using Fairwood.Math;
@@ -31,8 +29,6 @@ public class MainController : MonoBehaviour
         {
             PrefabHelper.InstantiateAndReset(prefab, null);
         }
-
-        if (LuaManager.Instance) LaunchConditions.Add(() => LuaManager.Instance.HasRegisterFinished);
     }
     /// <summary>
     /// 剔除重复的ManagerPrefabs
